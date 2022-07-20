@@ -1,0 +1,52 @@
+:root {
+  --ff-primary: 'DM Sans', sans-serif;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-core: 18px;
+
+  --clr-dark-brown: hsl(25, 47%, 15%);
+  --clr-medium-brown: hsl(28, 10%, 53%);
+
+  --clr-soft-red: hsl(10, 79%, 65%);
+
+  --clr-cyan: hsl(186, 34%, 60%);
+  --clr-cream: hsl(27, 66%, 92%);
+  --clr-pale-orange: hsl(33, 100%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+/*  
+############
+Separator Template
+############
+*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -4,17 +4,18 @@
   --fw-reg: 400;
   --fw-bold: 700;
 
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-h1: 3em;
+  --fs-h2: 2.25em;
+  --fs-h3: 1.5em;
+  --fs-body: 1em;
   --fs-core: 18px;
+
+  --box-padding: 1.25em;
+  --margin-btm: 1em;
 
   --clr-dark-brown: hsl(25, 47%, 15%);
   --clr-medium-brown: hsl(28, 10%, 53%);
-
   --clr-soft-red: hsl(10, 79%, 65%);
-
   --clr-cyan: hsl(186, 34%, 60%);
   --clr-cream: hsl(27, 66%, 92%);
   --clr-pale-orange: hsl(33, 100%, 98%);
@@ -38,9 +39,119 @@ ol {
   margin: 0;
 }
 
+body {
+  height: 100vh;
+  background-color: var(--clr-cream);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-core);
+}
+
+main {
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 450px;
+  border: 1px solid red;
+}
+
+
 /*  
 ############
-Separator Template
+Head
+############
+*/
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--clr-soft-red);
+  padding: var(--box-padding);
+  border-radius: 10px;
+  margin-bottom: var(--margin-btm)
+}
+
+.current-balance {
+  color: var(--clr-pale-orange);
+}
+
+.current-balance .balance {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+
+/*  
+############
+Graph
+############
+*/
+
+.graph-container {
+  background-color: var(--clr-pale-orange);
+  padding: var(--box-padding);
+  border-radius: var(--margin-btm);
+}
+
+.graph-container h1 {
+  font-size: var(--fs-h3);
+}
+
+.graph {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  min-height: 250px;
+  padding-bottom: var(--box-padding);
+  margin-bottom: var(--margin-btm);
+  border-bottom: 2px solid var(--clr-cream);
+}
+
+.graph li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.graph-bar {
+  order: -1;
+  width: 2em;
+  min-height: 3em;
+  background-color: var(--clr-soft-red);
+  border-radius: 5px;
+}
+
+
+/*  
+############
+Month section
+############
+*/
+
+.month-container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 3.5em;
+}
+
+.month-container .month {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.month-total {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+.percentage {
+  display: flex;
+  flex-direction: column;
+}
+
+/*  
+############
+Footer
 ############
 */
 .attribution {

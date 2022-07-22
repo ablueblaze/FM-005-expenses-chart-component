@@ -39,10 +39,9 @@ Users should be able to:
 ### Current/Continued Development
 
 - Where in the project am I? 
-  Setting up the basic HTML and Readme.
+  Setting up the javascript, and linking the data from the json to the page.
 
 - What is the next thing being developed?
-  HTML
 
 - Focus:
   Improve accessability score

@@ -40,6 +40,10 @@ ol {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   background-color: var(--clr-cream);
   font-family: var(--ff-primary);
@@ -50,6 +54,7 @@ main {
   padding: 1em;
   margin: 0 auto;
   max-width: 450px;
+  min-width: 360px;
   border: 1px solid red;
 }
 
@@ -120,6 +125,15 @@ Graph
   border-radius: 5px;
 }
 
+.graph-bar:focus,
+.graph-bar:hover {
+  background-color: var(--clr-cyan);
+}
+
+.graph-bar.active {
+  background-color: var(--clr-cyan);
+}
+
 
 /*  
 ############
@@ -144,9 +158,15 @@ Month section
   font-weight: var(--fw-bold);
 }
 
-.percentage {
+.percent {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.percent-change {
+  font-weight: var(--fw-bold);
 }
 
 /*  
@@ -154,7 +174,10 @@ Month section
 Footer
 ############
 */
+
 .attribution {
+  position: fixed;
+  bottom: 0;
   font-size: 11px;
   text-align: center;
 }

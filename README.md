@@ -42,6 +42,7 @@ Users should be able to:
   Setting up the modals to display the individual days spending
 
 - What is the next thing being developed?
+  Research grid, find a way to set up the graph bars using it.
 
 - Focus:
   Improve accessability score

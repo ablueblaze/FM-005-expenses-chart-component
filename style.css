@@ -5,7 +5,7 @@
   --fw-bold: 700;
 
   --fs-h1: 3em;
-  --fs-h2: 2.25em;
+  --fs-h2: 2em;
   --fs-h3: 1.5em;
   --fs-body: 1em;
   --fs-core: 18px;
@@ -51,9 +51,12 @@ body {
 }
 
 main {
-  padding: 1em;
+  /* padding: 1em; */
   margin: 0 auto;
-  max-width: 450px;
+  width: 100%;
+  height: fit-content;
+  max-height: 650px;
+  max-width: 550px;
   min-width: 360px;
   border: 1px solid red;
 }
@@ -67,6 +70,7 @@ Head
 
 .head {
   display: flex;
+  min-width: 100%;
   justify-content: space-between;
   background-color: var(--clr-soft-red);
   padding: var(--box-padding);
@@ -98,13 +102,14 @@ Graph
 
 .graph-container h1 {
   font-size: var(--fs-h3);
+  transition: all ease-in-out 600ms;
 }
 
 .graph {
   display: flex;
   justify-content: space-between;
   padding: 0;
-  min-height: 250px;
+  min-height: 300px;
   padding-bottom: var(--box-padding);
   margin-bottom: var(--margin-btm);
   border-bottom: 2px solid var(--clr-cream);
@@ -123,6 +128,16 @@ Graph
   min-height: 3em;
   background-color: var(--clr-soft-red);
   border-radius: 5px;
+  transition: all ease-in-out 600ms;
+}
+
+@media (min-width: 480px) {
+  .graph-container h1 {
+    font-size: var(--fs-h2);
+  }
+  .graph-bar {
+    width: 2.75em;
+  }
 }
 
 .graph-bar:focus,
@@ -134,6 +149,9 @@ Graph
   background-color: var(--clr-cyan);
 }
 
+.day {
+  text-align: center;
+}
 
 /*  
 ############

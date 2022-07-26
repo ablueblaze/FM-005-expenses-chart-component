@@ -39,10 +39,9 @@ Users should be able to:
 ### Current/Continued Development
 
 - Where in the project am I? 
-  Setting up the modals to display the individual days spending
+  Set up the modal to be centered and floating.
 
 - What is the next thing being developed?
-  Research grid, find a way to set up the graph bars using it.
 
 - Focus:
   Improve accessability score

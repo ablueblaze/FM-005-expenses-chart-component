@@ -120,16 +120,20 @@ Graph
 }
 
 .graph li {
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(13, 1fr);
+  /* display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end; */
   list-style: none;
+  width: 100%;
+  margin: 0 4px;
 }
 
 .graph-bar {
-  order: -1;
-  width: 2em;
-  min-height: 3em;
+  /* width: 2em;
+  min-height: 3em; */
+  grid-row-start: -1;
   background-color: var(--clr-soft-red);
   border-radius: 5px;
   transition: all ease-in-out 600ms;
@@ -139,9 +143,9 @@ Graph
   .graph-container h1 {
     font-size: var(--fs-h2);
   }
-  .graph-bar {
+  /* .graph-bar {
     width: 2.75em;
-  }
+  } */
 }
 
 .graph-bar:focus,
@@ -154,6 +158,8 @@ Graph
 }
 
 .day {
+  grid-row-start: -1;
+  order: 1;
   text-align: center;
 }
 
@@ -165,17 +171,8 @@ Spent modal
 
 .spent-modal {
   border: 1px solid blue;
-  margin-left: var(--modal-margin-small);
-  
-  text-align: center;
   font-size: .75em;
   order: -2;
-}
-
-@media (min-width: 480px) {
-  .spent-modal {
-  margin-left: var(--modal-margin-large);
-  }
 }
 
 /*  

@@ -20,15 +20,14 @@ const setGraphHight = async (graphData) => {
   data.map(day => {
     const associatedGraph = document.querySelector(`[data-graph-bar="${day.day}"]`)
     const spentModal = document.querySelector(`[data-spent-modal="${day.day}"]`)
-    let minHeightVal = Math.round(day.amount / 5)
+    let minHeightVal = Math.round(day.amount / 5) + 2
     let spentModalVal = day.amount
-    if (minHeightVal >= 13) {
-      minHeightVal = 13
+    if (minHeightVal >= 12) {
+      minHeightVal = 12
     }
-    
-
-
-    associatedGraph.style.minHeight = `${minHeightVal}em`
+    // associatedGraph.style.minHeight = `${minHeightVal}em`
+    associatedGraph.style.gridRowEnd = `-${minHeightVal}`;
+    spentModal.style.gridRowStart = `-${minHeightVal + 1}`
     
   })
 }

@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-[Project Demo](Demo.Url)
-[Github Repo](github.repo)
+[Project Demo](https://ablueblaze.github.io/FM-005-expenses-chart-component/)
+[Github Repo](https://github.com/ablueblaze/FM-005-expenses-chart-component)
 
 ### Current/Continued Development
 

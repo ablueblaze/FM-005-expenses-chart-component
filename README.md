@@ -39,7 +39,7 @@ Users should be able to:
 ### Current/Continued Development
 
 - Where in the project am I? 
-  Set up the modal to be centered and floating.
+  Introduce accessability to the project.
 
 - What is the next thing being developed?
 
@@ -47,6 +47,8 @@ Users should be able to:
   Improve accessability score
 
 - What would I like to do to improve the project in the future?
+  Find a way to implement the same design but with grid.
+    Not sure that would be an improvement.
 - Potential feature list?
 
 
@@ -74,7 +76,9 @@ Users should be able to:
 
 ### What I Learned
 
-- TBA
+- That I grid is cool, but easy to overcomplicated.
+- Using the methods I've already learned how to use is perfectly valid.
+- Talk out the problem more.
 
 
 ## Author

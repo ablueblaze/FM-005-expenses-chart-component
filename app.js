@@ -1,4 +1,5 @@
 const graphBars = document.querySelectorAll('[data-graph-bar]')
+const barModals = document.querySelectorAll(`[data-spent-modal`)
 const graph = document.querySelector('.graph')
 
 const fetchSpendingData = async (location) => {
@@ -20,15 +21,13 @@ const setGraphHight = async (graphData) => {
   data.map(day => {
     const associatedGraph = document.querySelector(`[data-graph-bar="${day.day}"]`)
     const spentModal = document.querySelector(`[data-spent-modal="${day.day}"]`)
-    let minHeightVal = Math.round(day.amount / 5) + 2
-    let spentModalVal = day.amount
+    const spentModalVal = (Math.round(day.amount * 100) / 100).toFixed(2);
+    let minHeightVal = Math.round(day.amount / 5) 
     if (minHeightVal >= 12) {
       minHeightVal = 12
     }
-    // associatedGraph.style.minHeight = `${minHeightVal}em`
-    associatedGraph.style.gridRowEnd = `-${minHeightVal}`;
-    spentModal.style.gridRowStart = `-${minHeightVal + 1}`
-    
+    associatedGraph.style.minHeight = `${minHeightVal}em`
+    spentModal.textContent = `$${spentModalVal}`;
   })
 }
 
@@ -37,11 +36,13 @@ setGraphHight(fetchSpendingData("./data.json"))
 graph.addEventListener('click', (e) => {
   const target = e.target;
   if (target.dataset.graphBar) {
-    const bar = target.dataset.graphBar
-    console.log(bar)
+    graphBars.forEach(bar => bar.classList.remove('active'))
+    barModals.forEach(modal => modal.classList.remove('active'))
+    target.classList.add('active')
+    const barDay = target.dataset.graphBar
+    const barModal = document.querySelector(`[data-spent-modal=${barDay}]`)
+    barModal.classList.add('active')
+    console.log(barModal)
   }
   console.log(target)
-})
-
-graphBars.forEach(graphBar => {
 })

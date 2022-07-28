@@ -12,6 +12,7 @@
 
   --box-padding: 1.25em;
   --margin-btm: 1em;
+  --column-width: 100%;
 
   --modal-margin-small: -.75em;
   --modal-margin-large: ;
@@ -55,14 +56,11 @@ body {
 }
 
 main {
-  /* padding: 1em; */
   margin: 0 auto;
   width: 100%;
   height: fit-content;
-  max-height: 650px;
   max-width: 550px;
   min-width: 360px;
-  border: 1px solid red;
 }
 
 
@@ -120,37 +118,35 @@ Graph
 }
 
 .graph li {
-  display: grid;
-  grid-template-rows: repeat(13, 1fr);
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end; */
+  justify-content: flex-end;
   list-style: none;
-  width: 100%;
-  margin: 0 4px;
+  width: var(--column-width);
 }
 
 .graph-bar {
-  /* width: 2em;
-  min-height: 3em; */
+  position: relative;
   grid-row-start: -1;
   background-color: var(--clr-soft-red);
   border-radius: 5px;
-  transition: all ease-in-out 600ms;
+  transition: all ease-in-out 400ms;
+  margin: 0 8px;
 }
 
 @media (min-width: 480px) {
   .graph-container h1 {
     font-size: var(--fs-h2);
   }
-  /* .graph-bar {
-    width: 2.75em;
-  } */
 }
 
 .graph-bar:focus,
 .graph-bar:hover {
   background-color: var(--clr-cyan);
+}
+
+.graph-bar:hover > .spent-modal{
+  opacity: 1;
 }
 
 .graph-bar.active {
@@ -170,10 +166,29 @@ Spent modal
 */
 
 .spent-modal {
-  border: 1px solid blue;
+  position: absolute;
+  opacity: 0;
+  background-color: var(--clr-dark-brown);
+  color: var(--clr-cream);
   font-size: .75em;
-  order: -2;
+  font-weight: var(--fw-bold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 130%;
+  min-width: 4em;
+  top: calc(3.25em * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all ease-in-out 400ms;
 }
+
+.spent-modal.active {
+  opacity: 1;
+}
+
 
 /*  
 ############

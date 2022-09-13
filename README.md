@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-[Project Demo](https://ablueblaze.github.io/FM-005-expenses-chart-component/)
+[Project Demo](https://sparkly-squirrel-e6c6c1.netlify.app/)
 [Github Repo](https://github.com/ablueblaze/FM-005-expenses-chart-component)
 
 ### Current/Continued Development
